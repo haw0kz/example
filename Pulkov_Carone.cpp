@@ -1,6 +1,6 @@
-#include "Carone.h"
+#include "Pulkov_carone.h"
 
-void Carone::output_in_console(Carone& car2)
+void Pulkov_Carone::output_in_console(Pulkov_Carone& car2)
 {
 	cout << "Name of car : " << car2.name << endl;
 	cout << "Model of car: " << car2.model << endl;
@@ -9,7 +9,7 @@ void Carone::output_in_console(Carone& car2)
 	cout << "Color of car: " << car2.color << endl;
 }
 
-void Carone::vvod(Carone& car2)
+void Pulkov_Carone::vvod(Pulkov_Carone& car2)
 {
 	cout << "Input name : " << endl;
 	cin >> car2.name;
@@ -23,7 +23,7 @@ void Carone::vvod(Carone& car2)
 	cin >> car2.color;
 }
 
-void Carone::input_in_file(Carone& car2)
+void Pulkov_Carone::input_in_file(Pulkov_Carone& car2)
 {
 	ifstream in("text.txt");
 	if (in.is_open())
@@ -33,7 +33,7 @@ void Carone::input_in_file(Carone& car2)
 	in.close();
 }
 
-void Carone::output_in_file(Carone& car2)
+void Pulkov_Carone::output_in_file(Pulkov_Carone& car2)
 {
 	ofstream outf("text.txt", ios::out);
 	outf << car2.name << endl;

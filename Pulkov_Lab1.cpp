@@ -3,8 +3,9 @@
 #include <process.h>
 #include <iostream>
 #include <vector>
-#include "Car.h"
-#include "Carone.h"
+#include "Pulkov_Car.h"
+#include "Pulkov_Carone.h"
+#include <windows.h>
 using namespace std;
 
 void menu()
@@ -20,11 +21,12 @@ void menu()
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     int countofmenu;
-    vector<Car> v;
-    Car car1;
-    Carone car2;
+    vector<Pulkov_Car> v;
+    Pulkov_Car car1;
+    Pulkov_Carone car2;
 
     while (true)
     {
@@ -34,7 +36,7 @@ int main()
         {
         case 1:
         {
-            v.push_back(car1);
+            car1.vvod();
             break;
         }
         case 2:
@@ -56,6 +58,7 @@ int main()
         case 5:
         {
             car1.clear_v();
+        
             break;
         }
         case 6:

@@ -1,7 +1,9 @@
-#include "Car.h"
+#include "Pulkov_Car.h"
+#include <iostream>
 #include <vector>
 
-ostream& operator << (ostream& out, const Car& car1)
+
+ostream& operator << (ostream& out, const Pulkov_Car& car1)
 {
 
 	cout << "Name of car : " << car1.name << endl;
@@ -11,7 +13,7 @@ ostream& operator << (ostream& out, const Car& car1)
 	cout << "Color of car: " << car1.color << endl;
 	return out;
 }
-istream& operator >> (istream& in, Car& car1)
+istream& operator >> (istream& in, Pulkov_Car& car1)
 {
 	cout << "Input name of car: " << endl;
 	cin >> car1.name;
@@ -27,21 +29,20 @@ istream& operator >> (istream& in, Car& car1)
 }
 
 
-ofstream& operator << (ofstream& outf, const Car& car1)
+ofstream& operator << (ofstream& outf, const Pulkov_Car& car1)
 {
-	outf  << car1.name << endl << car1.model << endl << car1.capacity << endl << car1.volume << endl << car1.color;
+	outf << car1.name << endl << car1.model << endl << car1.capacity << endl << car1.volume << endl << car1.color << endl;
 	return outf;
 }
 
-ifstream& operator >> (ifstream& ifs, Car& car1)
+ifstream& operator >> (ifstream& ifs, Pulkov_Car& car1)
 {
 	ifs >> car1.name >> car1.model >> car1.capacity >> car1.volume >> car1.color;
 	return ifs;
 }
 
-void Car::output_in_console()
+void Pulkov_Car::output_in_console()
 {
-	
 	cout << "Количество объектов:" << v.size() << endl;
 	for (auto iter = v.begin(); iter != v.end(); ++iter)
 	{
@@ -51,20 +52,20 @@ void Car::output_in_console()
 	}
 }
 
-void Car::vvod()
+void Pulkov_Car::vvod()
 {
-	Car car1;
+	Pulkov_Car car1;
 	cin >> car1;
 	v.push_back(car1);
 }
 
-void Car::input_in_file()
+void Pulkov_Car::input_in_file()
 {
 	
 	ifstream in("out.txt");
 	if (in.is_open())
 	{
-		Car car1;
+		Pulkov_Car car1;
 		while (in >> car1)
 		{
 			v.push_back(car1);
@@ -73,7 +74,7 @@ void Car::input_in_file()
 	in.close();
 }
 
-void Car::output_in_file()
+void Pulkov_Car::output_in_file()
 {
 	
 	ofstream fout;
@@ -82,10 +83,11 @@ void Car::output_in_file()
 		fout << *iter; 
 }
 
-void Car::clear_v()
+void Pulkov_Car::clear_v()
 {
-	while (v.size() != NULL)
+	if (v.size() != 0)
 	{
 		v.clear();
 	}
+	
 }

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Carone
+class Pulkov_Carone
 {
 public:
     string name;
@@ -15,10 +15,10 @@ public:
     float volume;
     string color;
 
-    void output_in_console(Carone& car2);
-    void vvod(Carone& car2);
-    void input_in_file(Carone& car2);
-    void output_in_file(Carone& car2);
+    void output_in_console(Pulkov_Carone& car2);
+    void vvod(Pulkov_Carone& car2);
+    void input_in_file(Pulkov_Carone& car2);
+    void output_in_file(Pulkov_Carone& car2);
    
 };
 

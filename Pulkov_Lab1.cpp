@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "Pulkov_Car.h"
-#include "Pulkov_Carone.h"
+#include "Pulkov_Conteiner.h"
 #include <windows.h>
 using namespace std;
 
@@ -24,9 +24,8 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int countofmenu;
-    vector<Pulkov_Car> v;
+    Pulkov_Conteiner v;
     Pulkov_Car car1;
-    Pulkov_Carone car2;
 
     while (true)
     {
@@ -36,28 +35,28 @@ int main()
         {
         case 1:
         {
-            car1.vvod();
+            v.vvod();
             break;
         }
         case 2:
         {
-            car1.output_in_console();
+            v.output_in_console();
             system("pause");
             break;
         }
         case 3:
         {
-            car1.input_in_file();
+            v.input_in_file();
             break;
         }
         case 4:
         {
-            car1.output_in_file();
+            v.output_in_file();
             break;
         }
         case 5:
         {
-            car1.clear_v();
+            v.clear_v();
         
             break;
         }

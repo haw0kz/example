@@ -24,7 +24,7 @@
     <ProjectGuid>{fe5da4b7-66f4-45ec-bf7e-6f68dca38ad3}</ProjectGuid>
     <RootNamespace>example</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Laboratornaya_1</ProjectName>
+    <ProjectName>Pulkov_Laboratornaya_1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,13 +140,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Pulkov_Conteiner.cpp" />
     <ClCompile Include="Pulkov_Car.cpp" />
-    <ClCompile Include="Pulkov_Carone.cpp" />
     <ClCompile Include="Pulkov_Lab1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Pulkov_Conteiner.h" />
     <ClInclude Include="Pulkov_Car.h" />
-    <ClInclude Include="Pulkov_Carone.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

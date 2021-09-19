@@ -44,9 +44,9 @@ ifstream& operator >> (ifstream& ifs, Pulkov_Car& car1)
 void Pulkov_Conteiner::output_in_console()
 {
 	cout << "Количество объектов:" << v.size() << endl;
-	for (auto iter = v.begin(); iter != v.end(); ++iter)
+	for (int i = 0; i != v.size(); ++i)
 	{
-		cout << *iter;
+		cout << *v[i];
 		cout << "-----------------------------------------------------------------------" << endl;
 
 	}
@@ -54,21 +54,21 @@ void Pulkov_Conteiner::output_in_console()
 
 void Pulkov_Conteiner::vvod()
 {
-	Pulkov_Car car1;
-	cin >> car1;
-	v.push_back(car1);
+	Pulkov_Car* p = new Pulkov_Car;
+	cin >> *p;
+	v.push_back(p);
 }
 
 void Pulkov_Conteiner::input_in_file()
 {
-	
-	ifstream in("out.txt");
+	ifstream in("out.txt", ios::binary);
 	if (in.is_open())
 	{
-		Pulkov_Car car1;
-		while (in >> car1)
+		Pulkov_Car* p = new Pulkov_Car;
+		while (in >> *p)
 		{
-			v.push_back(car1);
+			v.push_back(p);
+			p = new Pulkov_Car;
 		}
 	}
 	in.close();
@@ -79,15 +79,16 @@ void Pulkov_Conteiner::output_in_file()
 	
 	ofstream fout;
 	fout.open("out.txt", ios::out);
-	for (auto iter = v.begin(); iter != v.end(); ++iter)
-		fout << *iter; 
+	for (int i = 0; i != v.size(); ++i)
+		fout << *v[i]; 
 }
 
 void Pulkov_Conteiner::clear_v()
 {
-	if (v.size() != 0)
+	for (vector<Pulkov_Car*>::iterator pObj = v.begin(); pObj != v.end(); ++pObj)
 	{
-		v.clear();
+		delete* pObj;
 	}
-	
+	v.clear();
+
 }

@@ -13,6 +13,9 @@ public:
     string model;
     float capacity;
     float volume;
-    string color;  
+    string color;
+
+
+
 };
 

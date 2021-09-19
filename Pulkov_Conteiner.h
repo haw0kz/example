@@ -9,7 +9,8 @@ using namespace std;
 
 class Pulkov_Conteiner
 {
-    vector <Pulkov_Car> v;
+private:
+    vector <Pulkov_Car*> v;
 public:
 
     void output_in_console();

@@ -25,7 +25,6 @@ int main()
     SetConsoleOutputCP(1251);
     int countofmenu;
     Pulkov_Conteiner v;
-    Pulkov_Car car1;
 
     while (true)
     {

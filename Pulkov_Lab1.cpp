@@ -24,7 +24,7 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int countofmenu;
-    Pulkov_Conteiner v;
+    Pulkov_Conteiner Autopark;
 
     while (true)
     {
@@ -34,29 +34,28 @@ int main()
         {
         case 1:
         {
-            v.vvod();
+            Autopark.input_by_console();
             break;
         }
         case 2:
         {
-            v.output_in_console();
+            Autopark.output_in_console();
             system("pause");
             break;
         }
         case 3:
         {
-            v.input_in_file();
+            Autopark.input_from_file();
             break;
         }
         case 4:
         {
-            v.output_in_file();
+            Autopark.output_in_file();
             break;
         }
         case 5:
         {
-            v.clear_v();
-        
+            Autopark.clear_autopark();
             break;
         }
         case 6:

@@ -10,19 +10,21 @@ using namespace std;
 class Pulkov_Conteiner
 {
 private:
-    vector <Pulkov_Car*> v;
+    vector <Pulkov_Car*> vectorOfCar;
 public:
 
     void output_in_console();
-    void vvod();
-    void input_in_file();
+    void input_by_console();
+    void input_from_file();
     void output_in_file();
-    void clear_v();
-    
-    friend std::ostream& operator << (std::ostream& out, const Pulkov_Conteiner& car1);
-    friend std::istream& operator >> (std::istream& in, Pulkov_Conteiner& car1);
-    friend std::ofstream& operator << (std::ofstream& outf, const Pulkov_Conteiner& car1);
-    friend std::ifstream& operator >> (std::ifstream& ifs, Pulkov_Conteiner& car1);
+    void clear_autopark();
+
+    ~Pulkov_Conteiner()
+    {
+        cout << "Сработал деструктор!";
+        clear_autopark();
+    }
+
 };
 
 
